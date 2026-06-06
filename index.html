@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Música motivacional de fondo -->
+    <audio id="motivationalMusic" loop style="display:none;">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Navegación -->
     <nav class="navbar">
         <div class="container">
@@ -180,7 +185,7 @@
                 <div class="beneficio-item">
                     <div class="beneficio-number">01</div>
                     <h3>Educación de Calidad</h3>
-                    <p>Instructores certificados con experiencia en la industria tecnológica.</p>
+                    <p>Docentes capacitados con experiencia en la industria tecnológica.</p>
                     <i class="fas fa-award"></i>
                 </div>
                 
@@ -193,8 +198,8 @@
                 
                 <div class="beneficio-item">
                     <div class="beneficio-number">03</div>
-                    <h3>Certificado Oficial</h3>
-                    <p>Obtén un certificado reconocido al completar la capacitación exitosamente.</p>
+                    <h3>Habilidades para el Futuro</h3>
+                    <p>Adquiere las habilidades para desempeñarte en el campo laboral de forma exitosa.</p>
                     <i class="fas fa-certificate"></i>
                 </div>
                 
@@ -208,7 +213,7 @@
                 <div class="beneficio-item">
                     <div class="beneficio-number">05</div>
                     <h3>Oportunidades Laborales</h3>
-                    <p>Acceso a bolsa de empleo y conexiones con empresas del sector.</p>
+                    <p>Amplio campo laboral, crecimiento personal y buen sueldo.</p>
                     <i class="fas fa-briefcase"></i>
                 </div>
                 
@@ -339,5 +344,28 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Reproducir música motivacional cuando el usuario interactúa con la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('motivationalMusic');
+            
+            // Reproducir música al hacer clic o scroll
+            document.addEventListener('click', function() {
+                if (music.paused) {
+                    music.play().catch(function(error) {
+                        console.log('Reproducción de música automática bloqueada por el navegador');
+                    });
+                }
+            }, { once: true });
+            
+            document.addEventListener('scroll', function() {
+                if (music.paused) {
+                    music.play().catch(function(error) {
+                        console.log('Reproducción de música automática bloqueada por el navegador');
+                    });
+                }
+            }, { once: true });
+        });
+    </script>
 </body>
 </html>

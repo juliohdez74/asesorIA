@@ -233,8 +233,8 @@
             <h2 class="section-title">Galería Multimedia</h2>
             
             <div class="galeria-grid">
-                <!-- Aquí irán las imágenes y videos -->
-                <div class="galeria-item">
+                <!-- Galería de estudiantes en laboratorio -->
+                <div class="galeria-item" id="galleryLabBtn">
                     <div class="galeria-placeholder">
                         <i class="fas fa-image"></i>
                         <p>Foto de estudiantes en laboratorio</p>
@@ -264,6 +264,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal para la Galería de Laboratorio -->
+    <div id="galleryLabModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <button class="gallery-close">&times;</button>
+            <button class="gallery-nav prev" id="prevBtn">&#10094;</button>
+            <img class="gallery-image" id="galleryImage" src="" alt="Galería">
+            <button class="gallery-nav next" id="nextBtn">&#10095;</button>
+            <div class="gallery-counter">
+                <span id="imageCounter">1</span> / <span id="imageTotalCounter">1</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="contacto">

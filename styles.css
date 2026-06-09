@@ -150,7 +150,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 [...]
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
     opacity: 0.5;
 }
 
@@ -661,158 +661,6 @@ body {
     content: '';
 }
 
-/* ========== GALLERY MODAL STYLES ========== */
-.gallery-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-
-.gallery-modal.active {
-    display: flex;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.gallery-modal-content {
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.gallery-image {
-    max-width: 100%;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    animation: imageSlideIn 0.5s ease;
-    object-fit: contain;
-}
-
-@keyframes imageSlideIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.gallery-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    z-index: 2001;
-}
-
-.gallery-close:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1) rotate(90deg);
-}
-
-.gallery-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    z-index: 2001;
-    user-select: none;
-}
-
-.gallery-nav:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: translateY(-50%) scale(1.15);
-}
-
-.gallery-nav.prev {
-    left: 20px;
-}
-
-.gallery-nav.prev:hover {
-    transform: translateY(-50%) translateX(-5px) scale(1.15);
-}
-
-.gallery-nav.next {
-    right: 20px;
-}
-
-.gallery-nav.next:hover {
-    transform: translateY(-50%) translateX(5px) scale(1.15);
-}
-
-.gallery-counter {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 600;
-    backdrop-filter: blur(10px);
-    z-index: 2001;
-}
-
 /* ========== CONTACTO SECTION ========== */
 .contacto {
     padding: 100px 0;
@@ -1013,37 +861,5 @@ body {
         width: 60px;
         height: 60px;
         font-size: 28px;
-    }
-
-    .gallery-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .gallery-nav.prev {
-        left: 10px;
-    }
-
-    .gallery-nav.next {
-        right: 10px;
-    }
-
-    .gallery-close {
-        width: 40px;
-        height: 40px;
-        font-size: 28px;
-        top: 15px;
-        right: 15px;
-    }
-
-    .gallery-counter {
-        bottom: 20px;
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    .gallery-image {
-        max-height: 70vh;
     }
 }

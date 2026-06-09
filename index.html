@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacitación TICs | Colegio de Bachilleres</title>
+    <title>Capacitación TICs - Colegio de Bachilleres</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Música motivacional de fondo -->
     <audio id="motivationalMusic" loop style="display:none;">
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
+    <!-- Navegación -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <i class="fas fa-terminal"></i>
-                <span>TICs</span>
+                <i class="fas fa-laptop-code"></i>
+                <span>TICs TICS</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#actividades">Actividades</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -34,154 +35,337 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="word-glow">Transforma</span>
+                <span class="word">Transforma</span>
                 <span class="word">tu</span>
-                <span class="word-gradient">Futuro</span>
+                <span class="word">Futuro</span>
             </h1>
-            <p class="hero-subtitle">Domina las tecnologías que están moviendo al mundo entero.</p>
+            <p class="hero-subtitle">Capacitación en Tecnologías de la Información y Comunicación</p>
             <div class="hero-buttons">
-                <a href="#actividades" class="btn btn-primary">Ver Módulos</a>
-                <a href="#contacto" class="btn btn-secondary">¡Asegura tu lugar!</a>
+                <a href="#actividades" class="btn btn-primary">Conoce más</a>
+                <a href="#contacto" class="btn btn-secondary">Únete ahora</a>
             </div>
             <div class="hero-animation">
-                <div class="floating-box box1" title="Programación"><i class="fas fa-code"></i></div>
-                <div class="floating-box box2" title="Inteligencia Artificial"><i class="fas fa-brain"></i></div>
-                <div class="floating-box box3" title="Robótica e IoT"><i class="fas fa-robot"></i></div>
+                <div class="floating-box box1">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-box box2">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="floating-box box3">
+                    <i class="fas fa-wifi"></i>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección de Actividades -->
     <section id="actividades" class="actividades">
         <div class="container">
-            <h2 class="section-title">¿Qué vas a aprender?</h2>
-            <p class="section-subtitle">Habilidades interactivas, prácticas y con alta demanda en el mundo real.</p>
+            <h2 class="section-title">Actividades de la Capacitación</h2>
+            <p class="section-subtitle">Aprende las habilidades más demandadas en el mundo digital</p>
             
             <div class="actividades-grid">
+                <!-- Arduino -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Robótica con Arduino</h3>
-                    <p>Crea proyectos físicos autónomos, automatización e internet de las cosas (IoT).</p>
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Programación de Arduino</h3>
+                    <p>Aprende a programar microcontroladores y crear proyectos electrónicos interactivos con Arduino.</p>
                     <div class="card-tags">
-                        <span class="tag">Hardware</span>
+                        <span class="tag">Electrónica</span>
                         <span class="tag">IoT</span>
                     </div>
                 </div>
 
+                <!-- Hojas de Cálculo -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
-                    <h3>Data & Power BI</h3>
-                    <p>Domina el análisis de datos, automatización de hojas de cálculo y dashboards interactivos.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Hojas de Cálculo</h3>
+                    <p>Domina Excel, análisis de datos, gráficos avanzados y automatización de procesos con fórmulas.</p>
                     <div class="card-tags">
-                        <span class="tag">Data Science</span>
-                        <span class="tag">Gestión</span>
+                        <span class="tag">Datos</span>
+                        <span class="tag">Análisis</span>
                     </div>
                 </div>
 
+                <!-- Diseño Digital -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-                    <h3>Diseño y Contenido Digital</h3>
-                    <p>Aprende las bases de la composición visual, branding y creación multimedia profesional.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseño Digital</h3>
+                    <p>Crea gráficos, diseños web, y contenido visual profesional con herramientas modernas.</p>
                     <div class="card-tags">
-                        <span class="tag">Creative</span>
+                        <span class="tag">Creatividad</span>
                         <span class="tag">Diseño</span>
                     </div>
                 </div>
 
+                <!-- Gestión de Redes Sociales -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-hashtag"></i></div>
-                    <h3>Marketing & Social Media</h3>
-                    <p>Estrategias de crecimiento digital, algoritmos y gestión profesional de comunidades.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Gestión de Redes Sociales</h3>
+                    <p>Desarrolla estrategias de marketing digital y administra contenido en redes sociales profesionalmente.</p>
                     <div class="card-tags">
-                        <span class="tag">Growth</span>
                         <span class="tag">Marketing</span>
+                        <span class="tag">Digital</span>
                     </div>
                 </div>
 
+                <!-- Instalación de Redes -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-server"></i></div>
-                    <h3>Ciberseguridad e Infraestructura</h3>
-                    <p>Configuración de redes locales, routers, servidores y protección de datos.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Instalación de Redes</h3>
+                    <p>Aprende los fundamentos de redes de computadoras, configuración y administración de infraestructura.</p>
                     <div class="card-tags">
+                        <span class="tag">Infraestructura</span>
                         <span class="tag">Redes</span>
-                        <span class="tag">Seguridad</span>
                     </div>
                 </div>
 
+                <!-- Mantenimiento de Equipos -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-screwdriver-wrench"></i></div>
-                    <h3>Tech Support & Hardware</h3>
-                    <p>Diagnóstico avanzado, ensamblaje de componentes y optimización de sistemas operativos.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Mantenimiento de Equipos</h3>
+                    <p>Domina el diagnóstico, reparación y mantenimiento preventivo de computadoras y dispositivos.</p>
                     <div class="card-tags">
                         <span class="tag">Soporte</span>
-                        <span class="tag">PC Master Race</span>
+                        <span class="tag">Hardware</span>
                     </div>
                 </div>
 
+                <!-- Diseño Web -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-code-branch"></i></div>
-                    <h3>Desarrollo Web Frontend</h3>
-                    <p>Crea interfaces web modernas y responsivas con HTML5, CSS3 y JavaScript moderno.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Diseño de Páginas Web</h3>
+                    <p>Crea sitios web responsivos y funcionales usando HTML, CSS, JavaScript y frameworks modernos.</p>
                     <div class="card-tags">
-                        <span class="tag">Web Dev</span>
-                        <span class="tag">UI/UX</span>
+                        <span class="tag">Frontend</span>
+                        <span class="tag">Web</span>
                     </div>
                 </div>
 
+                <!-- Inteligencia Artificial -->
                 <div class="activity-card">
-                    <div class="card-icon"><i class="fas fa-atom"></i></div>
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
                     <h3>Inteligencia Artificial</h3>
-                    <p>Prompt engineering, automatización con modelos generativos y bases del Machine Learning.</p>
+                    <p>Explora el mundo de la IA, machine learning y el uso de herramientas de IA en diferentes campos.</p>
                     <div class="card-tags">
                         <span class="tag">IA</span>
-                        <span class="tag">Future</span>
+                        <span class="tag">ML</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección de Beneficios -->
     <section id="beneficios" class="beneficios">
         <div class="container">
-            <h2 class="section-title">¿Por qué elegir TICs?</h2>
+            <h2 class="section-title">¿Por qué unirse a nuestra capacitación?</h2>
             
             <div class="beneficios-grid">
                 <div class="beneficio-item">
                     <div class="beneficio-number">01</div>
-                    <h3>Clases 100% Dinámicas</h3>
-                    <p>Olvídate de la teoría aburrida. Aquí aprendes haciendo desde el primer día.</p>
-                    <i class="fas fa-bolt"></i>
+                    <h3>Educación de Calidad</h3>
+                    <p>Docentes capacitados con experiencia en la industria tecnológica.</p>
+                    <i class="fas fa-award"></i>
                 </div>
                 
                 <div class="beneficio-item">
                     <div class="beneficio-number">02</div>
-                    <h3>Proyectos Reales</h3>
-                    <p>Construye un portafolio digital que puedas presumir en tu CV o universidad.</p>
-                    <i class="fas fa-folder-open"></i>
+                    <h3>Proyectos Prácticos</h3>
+                    <p>Aprende haciendo con proyectos reales y casos de uso del mundo laboral.</p>
+                    <i class="fas fa-project-diagram"></i>
                 </div>
                 
                 <div class="beneficio-item">
                     <div class="beneficio-number">03</div>
-                    <h3>Perfil Universitario</h3>
-                    <p>Llega con una ventaja gigante si decides estudiar cualquier ingeniería o carrera de diseño.</p>
-                    <i class="fas fa-rocket"></i>
+                    <h3>Habilidades para el Futuro</h3>
+                    <p>Adquiere las habilidades para desempeñarte en el campo laboral de forma exitosa.</p>
+                    <i class="fas fa-certificate"></i>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-number">04</div>
+                    <h3>Formación Integral</h3>
+                    <p>Cubre desde conceptos básicos hasta temas avanzados en tecnología.</p>
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-number">05</div>
+                    <h3>Oportunidades Laborales</h3>
+                    <p>Amplio campo laboral, crecimiento personal y buen sueldo.</p>
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-number">06</div>
+                    <h3>Soporte Continuo</h3>
+                    <p>Mentoría y acompañamiento durante toda tu formación.</p>
+                    <i class="fas fa-handshake"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="galeria" class="galeria">
+    <!-- Sección de Galería de Fotos/Videos -->
+    <section class="galeria">
         <div class="container">
-            <h2 class="section-title">El Laboratorio en Acción</h2>
-            <p class="section-subtitle">Dale un vistazo a nuestras instalaciones y proyectos</p>
+            <h2 class="section-title">Galería Multimedia</h2>
             
             <div class="galeria-grid">
-                <div class="galeria-item interactivo" id="galleryLabBtn">
-                    <img src="images/lab_portada.jpg" alt="Laboratorio de TICs" class="galeria-thumb" onerror="this.style.display='none';">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-images"></i>
-                        <p>Ver fotos del Laboratorio</p>
+                <!-- Aquí irán las imágenes y videos -->
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Foto de estudiantes en laboratorio</p>
                     </div>
                 </div>
+                
+                <div class="galeria-item video">
+                    <div class="galeria-placeholder">
+                        <i class="fas fa-play"></i>
+                        <p>Video promocional de la capacitación</p>
+                    </div>
+                </div>
+                
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Proyectos de estudiantes</p>
+                    </div>
+                </div>
+                
+                <div class="galeria-item video">
+                    <div class="galeria-placeholder">
+                        <i class="fas fa-play"></i>
+                        <p>Testimonios de egresados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">¡Contáctanos!</h2>
+            <p class="section-subtitle">¿Preguntas? Nos encantaría escucharte</p>
+            
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Colegio de Bachilleres</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+55 XXXX-XXXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>capacitacion@tics.edu.mx</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contacto-form">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu email" required>
+                    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Capacitación TICs</h4>
+                    <p>Formando profesionales en tecnología para el futuro.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#actividades">Actividades</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Capacitación TICs - Colegio de Bachilleres. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Reproducir música motivacional cuando el usuario interactúa con la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('motivationalMusic');
+            
+            // Reproducir música al hacer clic o scroll
+            document.addEventListener('click', function() {
+                if (music.paused) {
+                    music.play().catch(function(error) {
+                        console.log('Reproducción de música automática bloqueada por el navegador');
+                    });
+                }
+            }, { once: true });
+            
+            document.addEventListener('scroll', function() {
+                if (music.paused) {
+                    music.play().catch(function(error) {
+                        console.log('Reproducción de música automática bloqueada por el navegador');
+                    });
+                }
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>

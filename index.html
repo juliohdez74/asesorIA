@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capacitación TICs - Colegio de Bachilleres</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand"><i class="fas fa-laptop-code"></i> TICs</div>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Transforma tu Futuro</h1>
+      <p class="hero-subtitle">Capacitación en Tecnologías de la Información y Comunicación</p>
+      <div class="hero-buttons">
+        <a href="#actividades" class="btn btn-primary">Conoce más</a>
+        <a href="#contacto" class="btn btn-secondary">Únete ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actividades -->
+  <section id="actividades" class="actividades">
+    <h2 class="section-title">Actividades de la Capacitación</h2>
+    <p class="section-subtitle">Aprende las habilidades más demandadas en el mundo digital</p>
+    <div class="actividades-grid">
+      <div class="activity-card"><i class="fas fa-microchip"></i><h3>Programación de Arduino</h3><p>Aprende a programar microcontroladores y crear proyectos electrónicos interactivos.</p></div>
+      <div class="activity-card"><i class="fas fa-table"></i><h3>Hojas de Cálculo</h3><p>Domina Excel, análisis de datos, gráficos avanzados y automatización de procesos.</p></div>
+      <div class="activity-card"><i class="fas fa-palette"></i><h3>Diseño Digital</h3><p>Crea gráficos, diseños web y contenido visual profesional con herramientas modernas.</p></div>
+      <div class="activity-card"><i class="fas fa-share-alt"></i><h3>Gestión de Redes Sociales</h3><p>Desarrolla estrategias de marketing digital y administra contenido profesionalmente.</p></div>
+      <div class="activity-card"><i class="fas fa-network-wired"></i><h3>Instalación de Redes</h3><p>Aprende fundamentos de redes de computadoras, configuración y administración.</p></div>
+      <div class="activity-card"><i class="fas fa-tools"></i><h3>Mantenimiento de Equipos</h3><p>Domina diagnóstico, reparación y mantenimiento preventivo de computadoras.</p></div>
+      <div class="activity-card"><i class="fas fa-code"></i><h3>Diseño de Páginas Web</h3><p>Crea sitios web responsivos usando HTML, CSS, JavaScript y frameworks modernos.</p></div>
+      <div class="activity-card"><i class="fas fa-robot"></i><h3>Inteligencia Artificial</h3><p>Explora el mundo de la IA, machine learning y herramientas de IA en diferentes campos.</p></div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria" class="galeria">
+    <h2 class="section-title">Galería Multimedia</h2>
+    <p class="section-subtitle">Conoce nuestras instalaciones y actividades</p>
+
+    <div class="galeria-categorias">
+
+      <!-- Tarjeta: Foto de estudiantes en laboratorio -->
+      <div class="galeria-card" id="card-laboratorio">
+        <div class="galeria-card-icon"><i class="fas fa-images"></i></div>
+        <h3>Foto de estudiantes en laboratorio</h3>
+        <p>Imágenes de nuestros alumnos trabajando en el laboratorio de cómputo</p>
+        <button class="btn btn-primary" onclick="abrirGaleria('laboratorio')">
+          <i class="fas fa-eye"></i> Ver fotos
+        </button>
+      </div>
+
+      <div class="galeria-card">
+        <div class="galeria-card-icon"><i class="fas fa-video"></i></div>
+        <h3>Video promocional</h3>
+        <p>Video promocional de la capacitación</p>
+        <button class="btn btn-primary"><i class="fas fa-play"></i> Ver video</button>
+      </div>
+
+      <div class="galeria-card">
+        <div class="galeria-card-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Proyectos de estudiantes</h3>
+        <p>Trabajos y proyectos realizados por nuestros alumnos</p>
+        <button class="btn btn-primary"><i class="fas fa-eye"></i> Ver proyectos</button>
+      </div>
+
+      <div class="galeria-card">
+        <div class="galeria-card-icon"><i class="fas fa-user-graduate"></i></div>
+        <h3>Testimonios de egresados</h3>
+        <p>Historias de éxito de quienes ya completaron la capacitación</p>
+        <button class="btn btn-primary"><i class="fas fa-eye"></i> Ver testimonios</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX: Galería de laboratorio -->
+  <div id="lightbox-overlay" class="lightbox-overlay" onclick="cerrarLightbox(event)">
+    <div class="lightbox-container">
+      <button class="lightbox-close" onclick="cerrarLightbox()">&times;</button>
+      <button class="lightbox-prev" onclick="cambiarFoto(-1)">&#10094;</button>
+      <button class="lightbox-next" onclick="cambiarFoto(1)">&#10095;</button>
+      <img id="lightbox-img" src="" alt="Foto laboratorio" />
+      <p id="lightbox-caption"></p>
+      <div id="lightbox-thumbnails" class="lightbox-thumbnails"></div>
+    </div>
+  </div>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2 class="section-title" style="color:white;">¡Contáctanos!</h2>
+    <p style="text-align:center; color:#ccc;">¿Preguntas? Nos encantaría escucharte</p>
+    <div class="contacto-info">
+      <div><i class="fas fa-map-marker-alt"></i> Colegio de Bachilleres</div>
+      <div><i class="fas fa-phone"></i> +55 XXXX-XXXX</div>
+      <div><i class="fas fa-envelope"></i> juliohernandez@cancuntresbonfil.edu.mx</div>
+    </div>
+    <form class="contacto-form">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Capacitación TICs - Colegio de Bachilleres. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@ const galerias = {
     { archivo: 'img03.jpeg', titulo: 'Estudiantes en laboratorio - 3' },
     { archivo: 'img04.jpeg', titulo: 'Estudiantes en laboratorio - 4' },
     { archivo: 'img05.jpeg', titulo: 'Estudiantes en laboratorio - 5' },
+    { archivo: 'img05.jpeg', titulo: 'Estudiantes en laboratorio - 6' },
   ]
 };
 

@@ -188,14 +188,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Formulario de contacto
-  var contactForm = document.querySelector('.contacto-form');
+ 
+  // Formulario de contacto — EmailJS
+  emailjs.init({ publicKey: 'EsmmkKuZRiNCcAhTQ' });
+
+  var contactForm = document.getElementById('contacto-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
-      contactForm.reset();
+      var nombre  = document.getElementById('cf-nombre').value.trim();
+      var email   = document.getElementById('cf-email').value.trim();
+      var mensaje = document.getElementById('cf-mensaje').value.trim();
+      var btn     = document.getElementById('cf-btn');
+      var fb      = document.getElementById('cf-feedback');
+      if (!nombre || !email || !mensaje) {
+        fb.textContent = '⚠️ Por favor completa todos los campos.';
+        fb.style.background = '#fff3cd'; fb.style.color = '#856404';
+        fb.style.display = 'block'; return;
+      }
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando…';
+      fb.style.display = 'none';
+      emailjs.send('service_7pmb8a8', 'template_trfnrx2', {
+        nombre: nombre, email: email, mensaje: mensaje
+      })
+      .then(function() {
+        fb.textContent = '✅ ¡Mensaje enviado! Te responderemos pronto.';
+        fb.style.background = '#d1fae5'; fb.style.color = '#065f46';
+        fb.style.display = 'block';
+        contactForm.reset();
+      })
+      .catch(function() {
+        fb.textContent = '❌ Error al enviar. Escríbenos a juliohernandez@cancuntresbonfil.edu.mx';
+        fb.style.background = '#fee2e2'; fb.style.color = '#7f1d1d';
+        fb.style.display = 'block';
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensaje';
+      });
     });
   }
+
+Haz clic en Commit changes y listo. ¿Necesitas ayuda con alguno de los pasos?Se quedó sin mensajes gratuitos hast
 
 });

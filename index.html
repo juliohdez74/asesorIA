@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -733,18 +734,15 @@ text-transform: uppercase;
     <div><i class="fas fa-phone"></i> +55 XXXX-XXXX</div>
     <div><i class="fas fa-envelope"></i> juliohernandez@cancuntresbonfil.edu.mx</div>
   </div>
-  <form class="contacto-form" id="contacto-form" novalidate>
+ <form class="contacto-form" id="contacto-form" novalidate>
     <input id="cf-nombre" type="text" placeholder="Tu nombre" required />
     <input id="cf-email" type="email" placeholder="Tu correo" required />
     <textarea id="cf-mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
-    <div id="cf-feedback" style="
-      display:none; padding:12px 16px; border-radius:8px;
-      font-size:14px; font-weight:600; text-align:center;
-    "></div>
+    <div id="cf-feedback" style="display:none; padding:12px 16px; border-radius:8px; font-size:14px; font-weight:600; text-align:center;"></div>
     <button type="submit" id="cf-btn" class="btn btn-primary">
-      <i class="fas fa-paper-plane"></i> Enviar mensaje
+        <i class="fas fa-paper-plane"></i> Enviar mensaje
     </button>
-  </form>
+</form>
 </section>
 
 <!-- Footer -->
